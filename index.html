@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Etch-A-Sketch</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div id = "container">
+
+		
+
+	</div>
+	<button id="reset"> Reset</button>
+
+</body>
+<script type="text/javascript">
+	const container = document.querySelector('#container');
+
+	for (var i = 0; i < 256; i++) {
+		const div = document.createElement('div');
+		//div.style.display = "inline";
+		div.classList.add('etch')
+
+		container.appendChild(div);	
+	}
+
+
+	function resetColor(e){
+		const divs = document.querySelectorAll('.etch');
+		divs.forEach(div => {
+		div.style.backgroundColor='black';
+		});
+	}
+
+	function mouseOver(e){
+		this.style.backgroundColor = 'white';
+		console.log('it is working');
+	}
+
+	const divs = document.querySelectorAll('.etch');
+
+	// we use the .forEach method to iterate through each button
+	divs.forEach(div => {
+	div.addEventListener('mouseover',mouseOver)
+	});
+
+	const resetButton = document.querySelector('#reset');
+	resetButton.addEventListener('click',resetColor);
+
+
+
+</script>
+
+</html>
