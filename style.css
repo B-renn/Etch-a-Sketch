@@ -1,19 +1,31 @@
 #container{
 	display: grid;
-	grid-column: 1fr 1fr 1fr 1fr; 
-	width: 500px;
-	height: 500px;
-	background: black;
+	grid-template-columns: repeat(16,[col-start] 1fr);
+	grid-template-rows: repeat(16,[col-start] 1fr);
+	width: 400px;
+	height: 200px;
+	margin: 0 auto;
+	padding-left: 50px;
+	padding-right:50px;
+	padding-top: 50px;
+	padding-bottom:100px;
+
+	background: red;
 
 }
-.etch {
-	width: = 10%;
 
+h3{
+	text-align: center;
+	position: relative;
+	top: 60px;
+	font-family: 'Lobster', cursive;
 }
 
-
-
-
+#resetButton{
+	display: block;
+	margin: 0 auto; 
+	position: relative;
+	bottom: 125px;
 }
 
 .hover{
@@ -24,3 +36,24 @@
 .reset{
 	background: black;
 }
+
+.circle{
+	display: block;
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+	background: white;
+	border-radius: 100%;
+}
+
+#rightCircle{
+	position: relative;
+	bottom: 115px;
+	left: 200px;
+}
+#leftCircle {
+	position: relative;
+	right:200px;
+	bottom: 70px;
+}
+
